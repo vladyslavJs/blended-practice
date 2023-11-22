@@ -26,23 +26,23 @@ const users = [
     },
 ];
 
-// console.table(users);
+console.table(users);
 
 // for (let i = 0; i < users.length; i++) {
 //     console.log(users[i]);
 // }
-//виведення даних циклом for
+// виведення даних циклом for
 
 // for (const item of users) {
 //     console.log(item) 
 // }
-//виведення даних циклом for or, для масивів
+// виведення даних циклом for or, для масивів
 
 // users.forEach(function (item, index) {
 //     console.log(item);
 //     console.log(index);
 // });
-//метод forEach - це спрощення методу for of
+// метод forEach - це спрощення методу for of
 
 // const count = {
 //     men: 0,
@@ -55,9 +55,18 @@ const users = [
 
 // console.log(count);
 
-const adultsUsers = users.filter(function (item) {
-    return item.age >= 18;
-});
+// const adultsUsers = users.filter(function (item) {
+//     return item.age >= 18;
+// });
+// метод filter
 
-console.log(adultsUsers);
+// console.log(adultsUsers);
+
+const correctNames = users.map(function (item) {
+    return item.sex === 'male' ? 'Mr. ' + item.name : 'Mrs. ' + item.name;
+});
+// метод map
+
+console.log(correctNames);
+
 console.log(users);
