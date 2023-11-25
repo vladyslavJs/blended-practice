@@ -1,6 +1,6 @@
 const users = [
     {
-        name: 'Vitali',
+        name: 'Vitaly',
         age: 26,
         sex: 'male',
     },
@@ -38,6 +38,7 @@ console.table(users);
 // }
 // виведення даних циклом for or, для масивів
 
+//-------------------------------------
 // users.forEach(function (item, index) {
 //     console.log(item);
 //     console.log(index);
@@ -55,6 +56,7 @@ console.table(users);
 
 // console.log(count);
 
+//-------------------------------------
 // const adultsUsers = users.filter(function (item) {
 //     return item.age >= 18;
 // });
@@ -62,11 +64,60 @@ console.table(users);
 
 // console.log(adultsUsers);
 
+//-------------------------------------
 const correctNames = users.map(function (item) {
     return item.sex === 'male' ? 'Mr. ' + item.name : 'Mrs. ' + item.name;
 });
+
+
 // метод map
 
-console.log(correctNames);
+//-------------------------------------
+// Метод reduce.Принцип дії
+// Акамулятор, іншими словами накопичувач.currentValue - поточне значення.Відклік починається з 0. 
+// Нам потрібно вивести вік користувачів, а саме до накопичувача додавати поточні значення і так по кожному об'єкту 
+// 1. accamulator = 0, currentValue = 26
+// 1. accamulator = 26, currentValue = 17
+// 1. accamulator = 43, currentValue = 16
+// 1. accamulator = 59, currentValue = 20
+// 1. accamulator = 79, currentValue = 34
+// Result = 113
+const sum = users.reduce(function (accmulator, currentValue) {
+    return accmulator + currentValue.age;
+}, 0);
+
+console.log(sum / users.length);
+
+//-------------------------------------
+// Метод find. Шукає елемент в масиві.
+const foundObj = users.find(function (item) {
+    return item.name === 'Vitaly';
+});
+
+console.log(foundObj);
+
+//-------------------------------------
+// Метод some. Перевіряє чи хоч одна умова задовілняється.
+const foundObject = users.some(function (item) {
+    return item.age > 18;
+});
+
+console.log(foundObject);
+
+//-------------------------------------
+// Метод every. Перевіряє чи кожна умова задовілняється.
+const found = users.every(function (item) {
+    return item.age  >= 16;
+});
+
+console.log(found);
+
+//-------------------------------------
+// Метод findIndex. Шукає порядковий номер в масиві.
+const foundIn = users.findIndex(function (item) {
+    return item.age > 16;
+});
+
+console.log(foundIn);
 
 console.log(users);
