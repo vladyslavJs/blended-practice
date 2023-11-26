@@ -3,44 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css"></link>
     <title>Document</title>
   </head>
-  <body style="background-color: azure">
-    <h1 style="font-family: 'Times New Roman', Times, serif">Теорія</h1>
-    <h2
-      style="
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-          sans-serif;
-      "
-    >
-      Методи масивів :
-    </h2>
-    <p
-      style="
-        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-        font-size: smaller;
-      "
-    >
-      arrow.push - додає нове значення в кінець масиву та повертає нову довжину
-      масиву 
-      <p>Синтаксис : arr.push(element1, ..., elementN)</p> 
-      <p>Приклад : </p>
-      var sports
-      = ["футбол", "бейсбол"]; 
-      <p>var total = sports.push("американський футбол",
-      "плавання");</p> 
-      <p>console.log(sports); // ['футбол', 'бейсбол', 'американський
-      футбол', 'плавання'] </p>
-      <p>console.log(total); // 4</p>
-    </p>
-    <p style="font-size: smaller">
-      Labore tempora placeat molestiae nam saepe? Exercitationem, illo eum! Nisi
-      totam cumque ratione. Numquam unde id assumenda hic quas fugit expedita
-      doloremque accusantium sed officiis eos, optio repellendus, a deserunt.
-    </p>
+  <body>
+    <div class="container">
+      <div class="todo-container">
+        <h1 class="todo-title">Todo List</h1>
+        <div class="input-container">
+          <input type="text">
+          <button class="add-button">Add task</button>
+        </div>
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+
+
+    <script src="./js/to-Do-list.js" defer type="module"></script>
     <!-- <script src="./js/bledned-practice.js" defer type="module"></script> -->
-    <script src="./js/blended-practice-oop.js" defer type="module"></script>
+    <!-- <script src="./js/blended-practice-oop.js" defer type="module"></script> -->
     <!-- <script src="./js/call-back-function.js" defer type="module"></script> -->
-    <script src="./js/arrow-methods.js" defer type="module"></script>
+    <!-- <script src="./js/array-methods.js" defer type="module"></script> -->
+    <!-- <script src="./js/arrow-function.js" defer type="module"></script> -->
   </body>
 </html>
